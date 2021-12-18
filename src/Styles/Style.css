@@ -9,12 +9,12 @@ html {
   font-size: 62.5%;
 }
 
-body {
+.coin-app {
   background-color: aqua;
-  font-size: 5rem;
 }
 
-.contact_info {
-  background-color: blue;
+.coin img {
+  height: 5rem;
+  width: 5rem;
 }
 /*# sourceMappingURL=Style.css.map */

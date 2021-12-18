@@ -7,10 +7,75 @@
 html {
   font-size: 62.5%;
 }
-body {
+.coin-app {
   background-color: aqua;
-  font-size: 5rem;
 }
-.contact_info{
-    background-color: blue;
+.coin img {
+  height: 5rem;
+  width: 5rem;
 }
+
+
+
+// .coin {
+//   display: flex;
+//   align-items: center;
+//   // min-width: 30rem;
+//   h1 {
+//     font-size: 3rem;
+//   }
+//   .coin-symbol {
+//     text-transform: uppercase;
+//     font-size: 2.5rem;
+//   }
+//   .coin img {
+//     height: 3rem;
+//     width: 3rem;
+//     margin: 0 1rem 0 0;
+//   }
+// }
+
+// .coin-data {
+//   font-size: 2rem;
+//   display: flex;
+//   text-align: center;
+//   justify-content: space-between;
+//   width: 100%;
+
+//   .coin-percent_green {
+//     font-size: 2rem;
+//     color: green;
+//     width: 100%;
+//   }
+//   .coin-percent_red {
+//     font-size: 2rem;
+//     color: red;
+//     width: 100%;
+//   }
+// }
+// .coin-row {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: start;
+//   align-items: center;
+//   height: 8rem;
+//   width: 100%;
+//   border-bottom: 0.1rem solid black;
+// }
+// .coin-search {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .coin-text {
+//   text-align: center;
+// }
+// .coin-input {
+//   border: none;
+//   text-align: center;
+//   padding: 0 0 0 0rem;
+// }
+// .coin-input::placeholder {
+//   color: aliceblue;
+// }

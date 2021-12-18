@@ -4,7 +4,7 @@ import "./Styles/Style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Coins from "./Components/Coins";
 // import NavBar from "./Components/NavBar";
-// import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 // import Footer from "./Components/Footer";
 
 function App() {
@@ -26,37 +26,40 @@ function App() {
     setSearch(e.target.value);
   };
 
-  const filterCoins = coins.fiilter((coin) =>
+  const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
   return (
-    <div className="coin-app">
-      <div className="coin-search">
-        <h1 className="coin-text">Search Currency</h1>
-        <form action="">
-          <input
-            type="text"
-            placeholder="Search"
-            className="coin-input"
-            onChange={handleChange}
-          />
-        </form>
+    <Container fluid>
+      <div className="coin-app container">
+        <div className="coin-search container-fluid p-5 d-flex align-items-center justify-content-center">
+          <Row>
+            <h1 className="coin-text ">Search Currency</h1>
+            <form>
+              <input
+                type="text"
+                placeholder="Search"
+                className="coin-input"
+                onChange={handleChange}
+              />
+            </form>
+          </Row>
+        </div>
+        {filteredCoins.map((coin) => {
+          return (
+            <Coins
+              key={coin.id}
+              name={coin.name}
+              image={coin.image}
+              symbol={coin.symbol}
+              price={coin.current_price}
+              priceChange={coin.price_change_percentage_24h}
+              volume={coin.market_cap}
+            />
+          );
+        })}
       </div>
-      {filterCoins.map((coin) => {
-        return (
-          <Coins
-            key={coin.id}
-            name={coin.name}
-            image={coin.image}
-            symbol={coin.symbol}
-            market_cap={coin.market_cap}
-            price={coin.current_price}
-            priceChange={coin.price_change_percentage_24h}
-            volume={coin.market_cap}
-          />
-        );
-      })}
-    </div>
+    </Container>
   );
 }
 
