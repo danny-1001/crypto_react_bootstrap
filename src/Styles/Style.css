@@ -10,11 +10,87 @@ html {
 }
 
 .coin-app {
-  background-color: aqua;
+  background-color: #37425b;
 }
 
 .coin img {
   height: 5rem;
   width: 5rem;
+}
+
+.coin-name {
+  font-size: 3rem;
+  color: antiquewhite;
+}
+
+.coin-symbol {
+  text-transform: uppercase;
+}
+
+.coin-symbol,
+.coin-price,
+.coin-volume,
+.coin_percent {
+  font-size: 2rem;
+  color: antiquewhite;
+  border-bottom: 0.2rem solid #aaaaaa;
+}
+
+@media (min-width: 768px) {
+  .coin-symbol,
+  .coin-price,
+  .coin-volume,
+  .coin_percent {
+    border-bottom: none;
+  }
+}
+
+.coin-input {
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+
+.coin-input .coin-input::-webkit-input-placeholder {
+  color: #37425b;
+}
+
+.coin-input .coin-input:-ms-input-placeholder {
+  color: #37425b;
+}
+
+.coin-input .coin-input::-ms-input-placeholder {
+  color: #37425b;
+}
+
+.coin-input .coin-input::placeholder {
+  color: #37425b;
+}
+
+.coin-percent_green {
+  font-size: 2rem;
+  color: green;
+  width: 100%;
+}
+
+.coin-percent_red {
+  font-size: 2rem;
+  color: red;
+  width: 100%;
+}
+
+.nav-links {
+  font-size: 1.5rem;
+}
+
+.arrow {
+  color: black;
+  background-color: crimson;
+  z-index: 10;
+}
+
+.arrow .arrow_up {
+  color: cyan;
+  background-color: darkgreen;
 }
 /*# sourceMappingURL=Style.css.map */

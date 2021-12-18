@@ -3,9 +3,9 @@ import axios from "axios";
 import "./Styles/Style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Coins from "./Components/Coins";
-// import NavBar from "./Components/NavBar";
-import { Container, Row } from "react-bootstrap";
-// import Footer from "./Components/Footer";
+import NavBar from "./Components/NavBar";
+import { Container } from "react-bootstrap";
+import Footer from "./Components/Footer";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
       )
       .then((res) => {
         setCoins(res.data);
@@ -31,19 +31,20 @@ function App() {
   );
   return (
     <Container fluid>
-      <div className="coin-app container">
-        <div className="coin-search container-fluid p-5 d-flex align-items-center justify-content-center">
-          <Row>
-            <h1 className="coin-text ">Search Currency</h1>
-            <form>
-              <input
-                type="text"
-                placeholder="Search"
-                className="coin-input"
-                onChange={handleChange}
-              />
-            </form>
-          </Row>
+      <NavBar />
+      <div className="coin-app container-fluid">
+        <div className="coin-search container-fluid p-3 d-flex align-items-center justify-content-center">
+          <h1 className="coin-text">Search Currency</h1>
+        </div>
+        <div className="coin-search container-fluid d-flex align-items-center justify-content-center">
+          <form>
+            <input
+              type="text"
+              placeholder="Search"
+              className="coin-input align-items-center justify-content-center container-fluid"
+              onChange={handleChange}
+            />
+          </form>
         </div>
         {filteredCoins.map((coin) => {
           return (
@@ -58,6 +59,7 @@ function App() {
             />
           );
         })}
+        <Footer />
       </div>
     </Container>
   );

@@ -1,13 +1,15 @@
-// import React from "react";
-// // import { Container, Row, Col } from "react-bootstrap";
-// const Footer = () => {
-//   return (
-//     <footer>
-//       <section className="p-5 contact_info">
+import React from "react";
+const Footer = () => {
+  return (
+    <footer className="p-5  text-white text-center position-relative">
+      <div className="container">
+        <p className="lead">Copyright &copy; 2021 Website Yo!</p>
+      </div>
+      <a href="#" class=" arrow bottom-0 end-0 p-5">
+        <i className="arrow_up bi bi-arrow-up-circle h1"></i>
+      </a>
+    </footer>
+  );
+};
 
-//       </section>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
+export default Footer;
