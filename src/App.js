@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false"
       )
       .then((res) => {
         setCoins(res.data);
@@ -26,9 +26,12 @@ function App() {
     setSearch(e.target.value);
   };
 
-  const filteredCoins = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(search.toLowerCase())
+  const filteredCoins = coins.filter(
+    (coin) =>
+      coin.name.toLowerCase().includes(search.toLowerCase()) ||
+      coin.symbol.toLowerCase().includes(search.toLowerCase())
   );
+
   return (
     <Container fluid>
       <NavBar />
@@ -36,7 +39,7 @@ function App() {
         <div className="coin-search container-fluid p-3 d-flex align-items-center justify-content-center">
           <h1 className="coin-text">Search Currency</h1>
         </div>
-        <div className="coin-search container-fluid d-flex align-items-center justify-content-center">
+        <div className="coin-search-input container-fluid d-flex align-items-center justify-content-center">
           <form>
             <input
               type="text"
@@ -59,8 +62,8 @@ function App() {
             />
           );
         })}
-        <Footer />
       </div>
+      <Footer />
     </Container>
   );
 }

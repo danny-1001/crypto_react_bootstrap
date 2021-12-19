@@ -1,0 +1,55 @@
+.coin-app {
+  background-color: $primary;
+  width: 100%;
+  .coin-text {
+    font-family: $font1;
+    padding: 10rem 0 0 0;
+    color: $secondary;
+  }
+  .coin-search {
+    padding: 2rem 0 0 0;
+  }
+}
+
+.coin img {
+  height: 5rem;
+  width: 5rem;
+}
+.coin-name {
+  font-family: $font2;
+  font-size: 3rem;
+  color: $text;
+}
+.coin-symbol {
+  text-transform: uppercase;
+}
+.coin-symbol,
+.coin-price,
+.coin-volume,
+.coin_percent {
+  font-family: $font2;
+  font-size: 2rem;
+  color: $text;
+  border-bottom: 0.2rem solid $borderBottom;
+  @media (min-width: 768px) {
+    border-bottom: none;
+  }
+}
+.coin-input {
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  .coin-input::placeholder {
+    color: $primary;
+  }
+}
+.coin-percent_green {
+  font-size: 2rem;
+  color: #39ff14;
+  width: 100%;
+}
+.coin-percent_red {
+  font-size: 2rem;
+  color: #ff3131;
+  width: 100%;
+}

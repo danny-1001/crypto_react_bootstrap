@@ -1,12 +1,9 @@
-$grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 740px,
-  lg: 1024px,
-);
+@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Luckiest+Guy&display=swap");
 
-$container-max-widths: (
-  sm: 420px,
-  md: 720px,
-  lg: 960px,
-);
+$primary: #37425b;
+$secondary: rgb(72, 209, 195);
+$borderBottom: #aaaaaa;
+$text: antiquewhite;
+$alttext: rgba(66, 66, 66, 0);
+$font1: "Luckiest Guy", cursive;
+$font2: "Bitter", serif;
