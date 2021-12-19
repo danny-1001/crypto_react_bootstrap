@@ -33,7 +33,7 @@ function App() {
   );
 
   return (
-    <Container fluid>
+    <Container fluid className="overall-contain">
       <NavBar />
       <div className="coin-app container-fluid">
         <div className="coin-search container-fluid p-3 d-flex align-items-center justify-content-center">
