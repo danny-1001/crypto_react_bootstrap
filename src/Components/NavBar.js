@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <Navbar expand="md" fixed="top" className="navBar">
@@ -10,7 +11,9 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-links ms-auto justify-content-space-between">
-            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link className="nav-link" href="#about">
+              About
+            </Nav.Link>
             <Nav.Link href="https://www.coindesk.com/" target={"_blank"}>
               News
             </Nav.Link>

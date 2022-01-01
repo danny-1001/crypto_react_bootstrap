@@ -36,7 +36,7 @@
   font-family: "Bitter", serif;
   font-size: 2rem;
   color: antiquewhite;
-  border-bottom: 0.2rem solid #aaaaaa;
+  border-bottom: 0.2rem solid #aaaaaac2;
 }
 
 @media (min-width: 768px) {
@@ -87,9 +87,12 @@ nav {
   background-color: #48d1c3;
 }
 
+nav .nav h1 {
+  color: blue;
+}
+
 nav .nav-links {
   font-size: 1.5rem;
-  color: #969696;
 }
 
 footer {
@@ -100,21 +103,32 @@ footer {
   margin: 0 0 0 0;
 }
 
+footer .contact-info {
+  font-size: 2.5rem;
+}
+
 footer .contact-list {
   width: 100%;
-  margin: 0 0 2rem 0;
+  padding: 2rem 0 0 0;
+  margin: 0 0 1rem 0;
   font-size: 2rem;
   list-style: none;
 }
 
-footer .contact-list .list-item {
-  border-radius: 10rem;
+footer .contact-list .list-item a {
+  color: black;
 }
 
-footer .arrow_up {
+footer .contact-list a:hover {
+  background-color: #37425b;
+  color: antiquewhite;
+}
+
+footer .arrow-up {
   font-size: 5rem;
   color: #37425b;
   margin: 0;
+  cursor: pointer;
 }
 
 * {

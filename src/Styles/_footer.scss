@@ -4,19 +4,30 @@ footer {
   color: rgb(58, 58, 58);
   padding: 0 0 0 0;
   margin: 0 0 0 0;
+
+  .contact-info {
+    font-size: 2.5rem;
+  }
   .contact-list {
     width: 100%;
-    margin: 0 0 2rem 0;
+    padding: 2rem 0 0 0;
+    margin: 0 0 1rem 0;
     font-size: 2rem;
     list-style: none;
 
-    .list-item {
-      border-radius: 10rem;
+    .list-item a {
+      color: black;
+    }
+
+    a:hover {
+      background-color: $primary;
+      color: antiquewhite;
     }
   }
-  .arrow_up {
+  .arrow-up {
     font-size: 5rem;
     color: $primary;
     margin: 0;
+    cursor: pointer;
   }
 }
