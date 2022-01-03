@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Styles/Style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Coins from "./Components/Coins";
-import NavBar from "./Components/NavBar";
 import { Container } from "react-bootstrap";
+import NavBar from "./Components/NavBar";
+import Coins from "./Components/Coins";
 import Footer from "./Components/Footer";
-import { Route, Link } from "react-router-dom";
 
 function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
-
+  
   useEffect(() => {
     axios
       .get(
@@ -36,8 +35,6 @@ function App() {
   return (
     <Container fluid className="overall-contain">
       <NavBar />
-      <Route exact path="/about" components = {About}/>
-      <Route exact path="/questions" components = {About}/>
       <div className="coin-app container-fluid">
         <div className="coin-search container-fluid p-3 d-flex align-items-center justify-content-center">
           <h1 className="coin-text">Search Currency</h1>

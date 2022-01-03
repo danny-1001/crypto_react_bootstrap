@@ -5,7 +5,7 @@ const Coins = ({ name, image, symbol, price, volume, priceChange }) => {
     <div className="coin-container container p-5 ">
       <div className="coin-row row">
         <div className="coin row">
-          <img className="img img-fluid " src={image} alt="crypto" />
+          <img className="img img-fluid " src={image} alt="crypto currency symbol" />
           <h1 className="coin-name col-md  ">{name}</h1>
           <p className="coin-symbol col-md ">{symbol}</p>
           <p className="coin-price col-md ">${price.toLocaleString()}</p>

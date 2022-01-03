@@ -1,7 +1,7 @@
 .coin-app {
   background-color: $primary;
   width: 100%;
-  
+
   .coin-text {
     font-family: $font1;
     padding: 10rem 0 0 0;
@@ -11,7 +11,10 @@
     padding: 2rem 0 0 0;
   }
 }
-
+.coin-container {
+  align-items: center;
+  justify-content: center;
+}
 .coin img {
   height: 5rem;
   width: 5rem;

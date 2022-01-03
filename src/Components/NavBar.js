@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <Navbar expand="md" fixed="top" className="navBar">
@@ -11,13 +11,22 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-links ms-auto justify-content-space-between">
-            <Nav.Link className="nav-link" href="#about">
-              About
+            <Nav.Link
+              className="nav-link"
+              href="https://www.nerdwallet.com/article/investing/cryptocurrency-7-things-to-know"
+              target={"_blank"}
+            >
+              What's Crypto?
             </Nav.Link>
             <Nav.Link href="https://www.coindesk.com/" target={"_blank"}>
-              News
+              Crypto News
             </Nav.Link>
-            <Nav.Link href="#questions">Questions</Nav.Link>
+            <Nav.Link
+              href="https://www.investing.com/charts/cryptocurrency-charts"
+              target={"_blank"}
+            >
+              Analytical Charts
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -14,6 +14,15 @@
   padding: 2rem 0 0 0;
 }
 
+.coin-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .coin img {
   height: 5rem;
   width: 5rem;
